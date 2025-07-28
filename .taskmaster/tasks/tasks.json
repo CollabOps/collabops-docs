@@ -179,28 +179,138 @@
         "id": 6,
         "title": "Setup Vercel Deployment",
         "description": "Configure Vercel for automatic deployment from the GitHub repository.",
-        "details": "1. Create a Vercel account or use existing one\n2. Connect Vercel to GitHub repository 'collabops-docs'\n3. Configure build settings:\n   - Build command: `npm run build`\n   - Output directory: `build`\n4. Set up environment variables if needed\n5. Configure automatic deployments for main branch\n6. Set up preview deployments for pull requests",
-        "testStrategy": "Push a small change to the repository and verify that Vercel automatically builds and deploys the site. Check build logs for any errors.",
-        "priority": "high",
+        "status": "done",
         "dependencies": [
           1,
           2
         ],
-        "status": "in-progress",
-        "subtasks": []
+        "priority": "high",
+        "details": "1. Create a Vercel account or use existing one\n2. Connect Vercel to GitHub repository 'collabops-docs'\n3. Configure build settings:\n   - Build command: `npm run build`\n   - Output directory: `build`\n4. Set up environment variables if needed\n5. Configure automatic deployments for main branch\n6. Set up preview deployments for pull requests",
+        "testStrategy": "Push a small change to the repository and verify that Vercel automatically builds and deploys the site. Check build logs for any errors.",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create vercel.json configuration file",
+            "description": "Created vercel.json with Docusaurus-optimized settings including build command, output directory, framework detection, static file caching headers, and SPA rewrites for client-side routing.",
+            "status": "done",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 2,
+            "title": "Fix broken links issues",
+            "description": "Created index pages for /docs/api, /docs/self-hosting, and /docs/faq. Updated Docusaurus config to warn on broken links (not throw). Build now succeeds and generates static files in build/ directory.",
+            "status": "done",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 3,
+            "title": "Commit and push configuration changes",
+            "description": "Committed and pushed all Vercel configuration changes to GitHub repository.",
+            "status": "done",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 4,
+            "title": "Connect GitHub repository to Vercel dashboard",
+            "description": "Manually connect the GitHub repository to Vercel via the web interface. Import CollabOps/collabops-docs repository in Vercel.",
+            "status": "done",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 5,
+            "title": "Configure automatic deployments",
+            "description": "Set up automatic deployments for main branch and configure preview deployments for pull requests. Verify Vercel auto-detects framework and uses vercel.json settings.",
+            "status": "done",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          }
+        ]
       },
       {
         "id": 7,
         "title": "Configure Custom Domain",
         "description": "Set up the docs.collabops.ai subdomain using Cloudflare and connect it to the Vercel deployment.",
-        "details": "1. Log in to Cloudflare DNS management\n2. Add a CNAME record pointing docs.collabops.ai to Vercel's deployment URL\n3. In Vercel project settings, add docs.collabops.ai as a custom domain\n4. Verify domain ownership if prompted\n5. Configure SSL settings (use Vercel's automatic SSL)\n6. Test domain propagation and SSL certificate issuance",
-        "testStrategy": "After DNS propagation (may take up to 48 hours), verify that https://docs.collabops.ai loads correctly with a valid SSL certificate. Test both HTTP and HTTPS to ensure proper redirects.",
-        "priority": "high",
+        "status": "in-progress",
         "dependencies": [
           6
         ],
-        "status": "pending",
-        "subtasks": []
+        "priority": "high",
+        "details": "## Manual Configuration Steps (External Dashboard Access Required)\n\n1. **Cloudflare DNS Configuration**:\n   - Log in to Cloudflare DNS management\n   - Add a CNAME record pointing docs.collabops.ai to collabops-docs.vercel.app\n   - Initially set CNAME record to \"DNS only\" (gray cloud) until verification is complete\n   - After verification, switch to \"Proxied\" (orange cloud) to enable Cloudflare's CDN and security features\n\n2. **Vercel Domain Configuration**:\n   - In Vercel project settings, add docs.collabops.ai as a custom domain\n   - Verify domain ownership if prompted\n   - Configure SSL settings (use Vercel's automatic SSL)\n\n3. **SSL Configuration**:\n   - In Cloudflare, set SSL/TLS encryption mode to \"Full\" (not \"Flexible\")\n   - Enable \"Always Use HTTPS\" and \"Automatic HTTPS Rewrites\" in Edge Certificates section\n   - Consider upgrading to \"Full (strict)\" mode after everything is working correctly\n\n4. **Performance Optimization**:\n   - Create Cloudflare Page Rules for docs.collabops.ai/* with appropriate cache settings:\n     - Cache Level: Standard\n     - Edge Cache TTL: ~2 hours (adjust based on update frequency)\n     - Browser Cache TTL: 30 minutes\n   - Configure Cloudflare Cache settings:\n     - Enable Origin Cache Control\n     - Set Browser Cache TTL to 30 minutes\n\n5. **Testing & Verification**:\n   - Test domain propagation and SSL certificate issuance\n   - Verify HTTPS works correctly\n   - Check performance and mobile responsiveness\n\n## Troubleshooting Common Issues\n- For redirect loops: Temporarily disable \"Always Use HTTPS\" in Cloudflare\n- For deployment changes not reflecting: Purge Cloudflare cache after significant deployments\n- For SSL certificate errors: Verify both Cloudflare and Vercel SSL configurations\n\n## Monitoring\n- Set up Cloudflare Analytics to monitor traffic and performance\n- Configure uptime monitoring with a service like UptimeRobot",
+        "testStrategy": "After DNS propagation (may take up to 48 hours), verify that https://docs.collabops.ai loads correctly with a valid SSL certificate. Test both HTTP and HTTPS to ensure proper redirects. Additionally, verify:\n\n1. SSL security (check for valid certificate)\n2. Performance using tools like PageSpeed Insights\n3. Mobile responsiveness across different devices\n4. Proper CDN functionality (check response headers for Cloudflare indicators)\n5. Caching behavior for static assets",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Configure Cloudflare DNS",
+            "description": "Add CNAME record pointing docs.collabops.ai to collabops-docs.vercel.app with initial DNS-only setting (gray cloud)",
+            "status": "pending",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 2,
+            "title": "Configure Vercel Custom Domain",
+            "description": "Add docs.collabops.ai as custom domain in Vercel dashboard and complete verification process",
+            "status": "pending",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 3,
+            "title": "Configure SSL Settings",
+            "description": "Set Cloudflare SSL/TLS encryption mode to 'Full' and enable 'Always Use HTTPS'",
+            "status": "pending",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 4,
+            "title": "Enable Cloudflare Proxy",
+            "description": "Switch CNAME record from DNS-only to Proxied (orange cloud) after verification is complete",
+            "status": "pending",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 5,
+            "title": "Configure Caching Rules",
+            "description": "Create page rules and cache settings for optimal performance",
+            "status": "pending",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 6,
+            "title": "Setup Monitoring",
+            "description": "Configure Cloudflare Analytics and uptime monitoring",
+            "status": "pending",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 7,
+            "title": "Comprehensive Testing",
+            "description": "Verify HTTPS, performance, mobile responsiveness, and CDN functionality",
+            "status": "pending",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          }
+        ]
       },
       {
         "id": 8,
@@ -251,7 +361,7 @@
     ],
     "metadata": {
       "created": "2025-07-28T02:27:38.208Z",
-      "updated": "2025-07-28T02:49:08.486Z",
+      "updated": "2025-07-28T02:55:26.764Z",
       "description": "Tasks for master context"
     }
   }
