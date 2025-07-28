@@ -1,0 +1,186 @@
+/**
+ * ConsentBanner Component Styles
+ * Follows CollabOps design system and branding guidelines
+ */
+
+.consentBanner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, var(--ifm-color-primary), var(--collabops-secondary));
+  color: white;
+  padding: var(--ifm-spacing-4);
+  box-shadow: var(--ifm-box-shadow-lg);
+  z-index: 9999;
+  border-top: 3px solid var(--collabops-accent);
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.consentContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ifm-spacing-6);
+}
+
+.consentText {
+  flex: 1;
+}
+
+.consentTitle {
+  margin: 0 0 var(--ifm-spacing-2) 0;
+  font-size: var(--ifm-h5-font-size);
+  font-weight: 600;
+  color: white;
+}
+
+.consentDescription {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+.privacyLink {
+  color: var(--collabops-accent);
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.privacyLink:hover {
+  color: var(--collabops-accent-light);
+  text-decoration: none;
+}
+
+.consentButtons {
+  display: flex;
+  gap: var(--ifm-spacing-3);
+  flex-shrink: 0;
+}
+
+.consentButton {
+  padding: var(--ifm-spacing-3) var(--ifm-spacing-5);
+  border: none;
+  border-radius: var(--ifm-button-border-radius);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 120px;
+  text-align: center;
+}
+
+.acceptButton {
+  background-color: var(--collabops-accent);
+  color: white;
+}
+
+.acceptButton:hover {
+  background-color: var(--collabops-accent-light);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.declineButton {
+  background-color: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.declineButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .consentBanner {
+    padding: var(--ifm-spacing-3);
+  }
+  
+  .consentContent {
+    flex-direction: column;
+    gap: var(--ifm-spacing-4);
+    text-align: center;
+  }
+  
+  .consentButtons {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .consentButton {
+    flex: 1;
+    min-width: auto;
+  }
+  
+  .consentDescription {
+    font-size: 0.8125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .consentButtons {
+    flex-direction: column;
+    gap: var(--ifm-spacing-2);
+  }
+  
+  .consentButton {
+    width: 100%;
+  }
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .consentBanner {
+  background: linear-gradient(135deg, var(--ifm-color-primary-dark), var(--collabops-secondary));
+  border-top-color: var(--collabops-accent);
+}
+
+[data-theme='dark'] .privacyLink {
+  color: var(--collabops-accent-light);
+}
+
+[data-theme='dark'] .privacyLink:hover {
+  color: var(--collabops-accent);
+}
+
+[data-theme='dark'] .declineButton {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme='dark'] .declineButton:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Accessibility improvements */
+.consentButton:focus {
+  outline: 2px solid var(--collabops-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .consentBanner {
+    animation: none;
+  }
+  
+  .consentButton:hover {
+    transform: none;
+  }
+} 

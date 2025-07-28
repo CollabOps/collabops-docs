@@ -85,6 +85,18 @@ const config: Config = {
         highlightSearchTermsOnTargetPage: true,
       },
     ],
+    [
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'G-XXXXXXXXXX', // Replace with your actual GA4 measurement ID
+        anonymizeIP: true, // GDPR compliance
+      },
+    ],
+  ],
+
+  // Client modules for analytics and other browser-side functionality
+  clientModules: [
+    require.resolve('./src/client/vercel-analytics.ts'),
   ],
 
   themeConfig: {

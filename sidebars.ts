@@ -25,16 +25,17 @@ const sidebars: SidebarsConfig = {
       ],
     },
 
-    // Getting Started Section
-    {
-      type: 'category', 
-      label: '🚀 Getting Started',
-      collapsed: false,
-      items: [
-        'getting-started',
-        'deployment-guide',
-      ],
-    },
+          // Getting Started Section
+      {
+        type: 'category',
+        label: '🚀 Getting Started',
+        collapsed: false,
+        items: [
+          'getting-started',
+          'deployment-guide',
+          'analytics-guide',
+        ],
+      },
 
     // API Reference Section
     {
