@@ -1,0 +1,66 @@
+# PRD: CollabOps Documentation Site (docs.collabops.ai)
+
+## 🧠 목적
+CollabOps의 사용자 문서, 설치 가이드, API 참조를 쉽게 검색하고 읽을 수 있도록 하는 공식 Documentation 사이트를 구축한다.  
+Docusaurus 기반으로 구성하며, GitHub로 버전 관리하고 Vercel에 배포한다.
+
+---
+
+## ✅ 주요 목표
+- 깔끔하고 신뢰감 있는 문서 UI 제공
+- Markdown 기반으로 협업 가능하게 구성
+- GitHub에서 수정 → Vercel에서 자동 배포
+- `docs.collabops.ai` 서브도메인 연결
+
+---
+
+## 🏗️ 기술 스택
+- **문서 생성기**: Docusaurus (v3, classic preset)
+- **호스팅**: Vercel (Free plan 사용 가능)
+- **문서 관리**: GitHub 저장소 (`collabops-docs`)
+- **DNS**: Cloudflare에 CNAME `docs.collabops.ai` → Vercel 연결
+
+---
+
+## 📦 주요 기능
+- `docs/` 폴더 내 Markdown 기반 문서 관리
+- 사이드바 자동 구성 (`sidebars.js`)
+- 릴리즈 노트, Getting Started, API 등 분류 구성
+- 기본 다크/라이트 모드 지원
+- 모바일 반응형 UI
+
+---
+
+## 🛠️ 개발 및 배포 플로우
+
+1. GitHub 저장소 생성 (`collabops-docs`)
+2. 로컬에서 Docusaurus 설치 및 설정
+3. `docs/` 아래에 문서 작성
+4. GitHub에 푸시 → Vercel이 자동 배포
+5. Vercel에서 custom domain 연결: `docs.collabops.ai`
+
+---
+
+## 🗂️ 문서 구조 예시
+
+- `docs/intro.md`: 프로젝트 소개
+- `docs/getting-started.md`: 시작 가이드
+- `docs/api/authentication.md`: 인증 API
+- `docs/self-hosting/helm.md`: 온프레미스 설치 가이드
+- `docs/faq/common.md`: 자주 묻는 질문
+
+---
+
+## 🚀 기대 효과
+- 개발자 및 팀 리더가 빠르게 제품 이해
+- 고객 지원 감소 및 자가 해결률 증가
+- 외부 파트너/투자자에게도 전문성 전달
+
+---
+
+## 📅 일정 제안
+- 문서 초안 구성: 1일
+- Docusaurus 설정 및 GitHub 푸시: 1일
+- Vercel 연결 및 서브도메인 세팅: 0.5일
+- 총 소요 예상: 약 2~3일
+

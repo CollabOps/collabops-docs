@@ -1,0 +1,203 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Create GitHub Repository",
+        "description": "Create a new GitHub repository named 'collabops-docs' for version control of the documentation site.",
+        "details": "1. Log in to GitHub\n2. Create a new repository named 'collabops-docs'\n3. Initialize with README.md\n4. Set appropriate permissions for team members\n5. Create initial branch structure (main, development)\n6. Add .gitignore file for Node.js projects",
+        "testStrategy": "Verify repository creation by checking access permissions, README visibility, and branch structure. Ensure team members can clone the repository.",
+        "priority": "high",
+        "dependencies": [],
+        "status": "in-progress",
+        "subtasks": []
+      },
+      {
+        "id": 2,
+        "title": "Setup Docusaurus Project",
+        "description": "Initialize and configure a Docusaurus v3 project with classic preset as the foundation for the documentation site.",
+        "details": "1. Install Node.js and npm if not already installed\n2. Run `npx create-docusaurus@latest collabops-docs classic`\n3. Navigate to project directory\n4. Update package.json with project details\n5. Configure docusaurus.config.js with:\n   - Site title: 'CollabOps Documentation'\n   - Favicon\n   - Base URL\n   - Organization details\n6. Setup dark/light mode theming in theme configuration",
+        "testStrategy": "Run the development server with `npm start` and verify the site loads correctly with proper styling. Test dark/light mode toggle functionality.",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 3,
+        "title": "Configure Sidebar Navigation",
+        "description": "Set up the sidebar navigation structure using sidebars.js to organize documentation categories.",
+        "details": "1. Edit sidebars.js to create the following categories:\n   - Introduction\n   - Getting Started\n   - API Reference\n   - Self-Hosting\n   - FAQ\n2. Configure auto-generated sidebar for each category\n3. Set up collapsible categories\n4. Add proper ordering of documents\n5. Implement category labels and descriptions",
+        "testStrategy": "Navigate through the sidebar in development environment to verify all categories are visible and properly nested. Check that documents appear in the correct order.",
+        "priority": "medium",
+        "dependencies": [
+          2
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 4,
+        "title": "Create Initial Documentation Structure",
+        "description": "Create the basic documentation file structure with initial Markdown files according to the proposed document structure.",
+        "status": "done",
+        "dependencies": [
+          2,
+          3
+        ],
+        "priority": "high",
+        "details": "Continue building on the partially completed documentation structure:\n\nCompleted:\n- docs/intro.md - Project introduction (updated with CollabOps branding)\n- Folder structure created for api/, self-hosting/, and faq/\n\nRemaining files to create:\n1. docs/getting-started.md - Getting started guide\n2. docs/api/authentication.md - Authentication API documentation\n3. docs/self-hosting/helm.md - Helm chart installation guide\n4. docs/faq/common.md - Common FAQs\n\nEach file should include:\n- Proper frontmatter with title, sidebar position\n- Basic content structure with headings\n- Placeholder text where detailed content will be added later",
+        "testStrategy": "Verify all remaining files are created with correct frontmatter. Check that they appear in the sidebar and render properly in the browser. Ensure the existing intro.md with CollabOps branding displays correctly.",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Update docs/intro.md with CollabOps branding",
+            "description": "Update the introduction page with CollabOps branding elements and basic project overview.",
+            "status": "done",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 2,
+            "title": "Create folder structure",
+            "description": "Create the api/, self-hosting/, and faq/ folders in the docs directory.",
+            "status": "done",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 3,
+            "title": "Create docs/getting-started.md",
+            "description": "Create getting started guide with proper frontmatter and basic content structure.",
+            "status": "done",
+            "dependencies": [],
+            "details": "<info added on 2025-07-28T02:31:25.331Z>\nSuccessfully created docs/getting-started.md with comprehensive content including proper Docusaurus frontmatter (sidebar_position: 2, title, description), Quick Start section with Cloud and Self-hosted options, System Requirements for both deployment types, Step-by-step Initial Setup guide, Core Features Overview (Project Management, Team Collaboration, Automation), What's Next section with links to other docs, and Help and support section with contact information. The file is properly structured with emoji icons, code blocks, and internal navigation links, ready for users to follow the getting started process.\n</info added on 2025-07-28T02:31:25.331Z>",
+            "testStrategy": ""
+          },
+          {
+            "id": 4,
+            "title": "Create docs/api/authentication.md",
+            "description": "Create authentication API documentation with proper frontmatter and basic content structure.",
+            "status": "done",
+            "dependencies": [],
+            "details": "<info added on 2025-07-28T02:32:22.470Z>\nCreated comprehensive API authentication documentation at docs/api/authentication.md with proper Docusaurus frontmatter (sidebar_position: 1). The document covers three authentication methods in detail: API Keys, OAuth 2.0, and JWT Tokens, each with step-by-step implementation guides and code examples in bash, JavaScript, and Python. Included security best practices section with clear do's and don'ts, rate limiting information with relevant headers, and complete working examples featuring the CollabOpsClient class and OAuth flow implementation. Added an error handling section documenting common authentication errors, a testing authentication endpoint guide, and next steps that link to other API documentation sections. The documentation is developer-friendly, production-ready, and follows all documentation standards.\n</info added on 2025-07-28T02:32:22.470Z>",
+            "testStrategy": ""
+          },
+          {
+            "id": 5,
+            "title": "Create docs/self-hosting/helm.md",
+            "description": "Create Helm chart installation guide with proper frontmatter and basic content structure.",
+            "status": "done",
+            "dependencies": [],
+            "details": "<info added on 2025-07-28T02:33:31.280Z>\nSuccessfully created comprehensive Helm chart installation guide at docs/self-hosting/helm.md with proper Docusaurus frontmatter (sidebar_position: 1). The guide includes prerequisites covering Kubernetes and system requirements, a quick installation section with step-by-step commands, and detailed configuration with complete values.yaml examples. Security configuration covers TLS/SSL setup and network policies, while monitoring sections detail Prometheus and Grafana integration. The document also provides backup & recovery procedures with CronJob examples, maintenance procedures for updates, scaling, and resource monitoring, a troubleshooting section addressing common issues, uninstallation procedures, and links to related documentation. The guide is production-ready, enterprise-grade, and comprehensively covers all aspects of Kubernetes deployment.\n</info added on 2025-07-28T02:33:31.280Z>",
+            "testStrategy": ""
+          },
+          {
+            "id": 6,
+            "title": "Create docs/faq/common.md",
+            "description": "Create common FAQs page with proper frontmatter and basic content structure.",
+            "status": "done",
+            "dependencies": [],
+            "details": "<info added on 2025-07-28T02:34:46.557Z>\nSuccessfully created comprehensive FAQ documentation at docs/faq/common.md including:\n\n✅ Proper Docusaurus frontmatter with sidebar_position: 1\n✅ Complete coverage of 8 major categories: Getting Started, Account & Team Management, Technical Questions, Integrations & API, Self-Hosting & Enterprise, Features & Functionality, Troubleshooting, Getting Help\n✅ Over 30 frequently asked questions with detailed answers\n✅ Pricing information and plan comparisons\n✅ Security and compliance details\n✅ Comprehensive troubleshooting section with step-by-step solutions\n✅ Multiple support channels and contact information\n✅ Links to related documentation and resources\n✅ User-friendly formatting with emojis and clear sections\n\nThe FAQ document is comprehensive, user-focused, and addresses all major user concerns and questions.\n</info added on 2025-07-28T02:34:46.557Z>",
+            "testStrategy": ""
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Implement Responsive UI and Styling",
+        "description": "Customize the Docusaurus theme to ensure mobile responsiveness and implement CollabOps branding.",
+        "details": "1. Create custom CSS in src/css/custom.css\n2. Define primary and secondary colors based on CollabOps branding\n3. Customize fonts and typography\n4. Add responsive breakpoints for mobile devices\n5. Test and adjust navigation menu for mobile view\n6. Ensure proper rendering of code blocks and tables on small screens\n7. Optimize images for different screen sizes",
+        "testStrategy": "Test the site on multiple device sizes (desktop, tablet, mobile) using browser dev tools. Verify all elements are properly visible and usable on small screens. Check that dark/light mode works correctly across all views.",
+        "priority": "medium",
+        "dependencies": [
+          2
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 6,
+        "title": "Setup Vercel Deployment",
+        "description": "Configure Vercel for automatic deployment from the GitHub repository.",
+        "details": "1. Create a Vercel account or use existing one\n2. Connect Vercel to GitHub repository 'collabops-docs'\n3. Configure build settings:\n   - Build command: `npm run build`\n   - Output directory: `build`\n4. Set up environment variables if needed\n5. Configure automatic deployments for main branch\n6. Set up preview deployments for pull requests",
+        "testStrategy": "Push a small change to the repository and verify that Vercel automatically builds and deploys the site. Check build logs for any errors.",
+        "priority": "high",
+        "dependencies": [
+          1,
+          2
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 7,
+        "title": "Configure Custom Domain",
+        "description": "Set up the docs.collabops.ai subdomain using Cloudflare and connect it to the Vercel deployment.",
+        "details": "1. Log in to Cloudflare DNS management\n2. Add a CNAME record pointing docs.collabops.ai to Vercel's deployment URL\n3. In Vercel project settings, add docs.collabops.ai as a custom domain\n4. Verify domain ownership if prompted\n5. Configure SSL settings (use Vercel's automatic SSL)\n6. Test domain propagation and SSL certificate issuance",
+        "testStrategy": "After DNS propagation (may take up to 48 hours), verify that https://docs.collabops.ai loads correctly with a valid SSL certificate. Test both HTTP and HTTPS to ensure proper redirects.",
+        "priority": "high",
+        "dependencies": [
+          6
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 8,
+        "title": "Implement Search Functionality",
+        "description": "Add search capability to the documentation site to allow users to quickly find relevant information.",
+        "details": "1. Configure Docusaurus' built-in search functionality in docusaurus.config.js\n2. Alternatively, integrate Algolia DocSearch:\n   - Register for Algolia DocSearch\n   - Add Algolia API keys to environment variables\n   - Configure search parameters in docusaurus.config.js\n3. Customize search UI to match site styling\n4. Add search metadata to documentation pages\n5. Test search indexing and result relevance",
+        "testStrategy": "Test search functionality by searching for various keywords and verifying that relevant results appear. Check that search works in both dark and light modes and on mobile devices.",
+        "priority": "medium",
+        "dependencies": [
+          2,
+          4,
+          5
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 9,
+        "title": "Add Edit on GitHub Links",
+        "description": "Configure each documentation page to include an 'Edit this page on GitHub' link to facilitate community contributions.",
+        "details": "1. In docusaurus.config.js, configure the editUrl parameter to point to the GitHub repository\n2. Set editCurrentVersion to true\n3. Customize the edit link text if needed\n4. Ensure proper branch name is used in the edit URL\n5. Test that clicking the link takes users to the correct file in GitHub's editor",
+        "testStrategy": "Click the edit links on various pages and verify they lead to the correct file in the GitHub repository. Check that the edit link appears in the expected location on the page.",
+        "priority": "low",
+        "dependencies": [
+          1,
+          2,
+          4
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 10,
+        "title": "Create Deployment Documentation",
+        "description": "Document the deployment process and contribution guidelines for team members who will maintain the documentation site.",
+        "details": "Create a README.md in the repository root with:\n1. Project overview and purpose\n2. Local development setup instructions\n3. How to add/edit documentation\n4. Deployment workflow explanation\n5. Guidelines for contributing (formatting, style guide)\n6. Contact information for maintainers\n\nAlso create a CONTRIBUTING.md file with detailed contribution guidelines.",
+        "testStrategy": "Have a team member follow the instructions to set up a local development environment and make a small change. Verify they can successfully complete the process without additional assistance.",
+        "priority": "medium",
+        "dependencies": [
+          1,
+          2,
+          6,
+          7
+        ],
+        "status": "pending",
+        "subtasks": []
+      }
+    ],
+    "metadata": {
+      "created": "2025-07-28T02:27:38.208Z",
+      "updated": "2025-07-28T02:35:23.177Z",
+      "description": "Tasks for master context"
+    }
+  }
+}
