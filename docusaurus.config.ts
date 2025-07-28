@@ -40,15 +40,17 @@ const config: Config = {
     [
       'classic',
       {
-        docs: {
-          sidebarPath: './sidebars.ts',
-          // Edit this page on GitHub - points directly to GitHub's editor
-          editUrl: 'https://github.com/collabops/collabops-docs/edit/main/',
-          // Enable editing of the current version
-          editCurrentVersion: true,
-          // Enable editing of localized files if we add i18n later
-          editLocalizedFiles: true,
-        },
+            docs: {
+      sidebarPath: './sidebars.ts',
+      // Set docs to be served from the root path instead of /docs/
+      routeBasePath: '/',
+      // Edit this page on GitHub - points directly to GitHub's editor
+      editUrl: 'https://github.com/collabops/collabops-docs/edit/main/',
+      // Enable editing of the current version
+      editCurrentVersion: true,
+      // Enable editing of localized files if we add i18n later
+      editLocalizedFiles: true,
+    },
         blog: {
           showReadingTime: true,
           feedOptions: {
@@ -85,18 +87,6 @@ const config: Config = {
         highlightSearchTermsOnTargetPage: true,
       },
     ],
-    [
-      '@docusaurus/plugin-google-gtag',
-      {
-        trackingID: 'G-XXXXXXXXXX', // Replace with your actual GA4 measurement ID
-        anonymizeIP: true, // GDPR compliance
-      },
-    ],
-  ],
-
-  // Client modules for analytics and other browser-side functionality
-  clientModules: [
-    require.resolve('./src/client/vercel-analytics.ts'),
   ],
 
   themeConfig: {
@@ -131,15 +121,15 @@ const config: Config = {
           items: [
             {
               label: 'Getting Started',
-              to: '/docs/intro',
+              to: '/',
             },
             {
               label: 'API Reference',
-              to: '/docs/api',
+              to: '/api',
             },
             {
               label: 'Self-Hosting',
-              to: '/docs/self-hosting',
+              to: '/self-hosting',
             },
           ],
         },

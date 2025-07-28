@@ -33,7 +33,7 @@ const sidebars: SidebarsConfig = {
         items: [
           'getting-started',
           'deployment-guide',
-          'analytics-guide',
+  
         ],
       },
 

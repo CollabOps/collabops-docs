@@ -228,7 +228,7 @@ The site uses the following production configuration:
 - **Domain**: docs.collabops.ai
 - **SSL**: Automatic HTTPS via Vercel + Cloudflare
 - **CDN**: Cloudflare with global edge caching
-- **Analytics**: Vercel Web Analytics enabled
+
 - **Search Index**: Generated during build process
 
 ## 🤝 Contributing
