@@ -69,6 +69,24 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        // Whether to index docs pages
+        indexDocs: true,
+        // Whether to index blog pages
+        indexBlog: true,
+        // Whether to index static pages
+        indexPages: false,
+        // Language for search
+        language: ['en'],
+        // Whether to highlight search terms on target page
+        highlightSearchTermsOnTargetPage: true,
+      },
+    ],
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',

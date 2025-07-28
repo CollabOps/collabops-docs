@@ -7,6 +7,9 @@
 /* Import modern fonts for better readability */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
+/* Import CollabOps search styling */
+@import './search-local.css';
+
 /* === ROOT VARIABLES - CollabOps Design System === */
 :root {
   /* === CollabOps Brand Colors === */
