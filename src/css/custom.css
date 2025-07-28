@@ -1,30 +1,344 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * CollabOps Documentation Site - Custom CSS
+ * Modern, responsive design system for professional documentation
+ * Built with Docusaurus 3 and Infima CSS framework
  */
 
-/* You can override the default Infima variables here. */
+/* Import modern fonts for better readability */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* === ROOT VARIABLES - CollabOps Design System === */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* === CollabOps Brand Colors === */
+  --ifm-color-primary: #2563EB;
+  --ifm-color-primary-dark: #1D4ED8;
+  --ifm-color-primary-darker: #1E40AF;
+  --ifm-color-primary-darkest: #1E3A8A;
+  --ifm-color-primary-light: #3B82F6;
+  --ifm-color-primary-lighter: #60A5FA;
+  --ifm-color-primary-lightest: #93C5FD;
+  
+  /* Secondary & Accent Colors */
+  --collabops-secondary: #0D9488;
+  --collabops-secondary-light: #14B8A6;
+  --collabops-accent: #F97316;
+  --collabops-accent-light: #FB923C;
+  
+  /* Status Colors */
+  --ifm-color-success: #10B981;
+  --ifm-color-warning: #F59E0B;
+  --ifm-color-danger: #EF4444;
+  --ifm-color-info: #3B82F6;
+  
+  /* Neutral Colors */
+  --ifm-color-gray-0: #FFFFFF;
+  --ifm-color-gray-100: #F9FAFB;
+  --ifm-color-gray-200: #F3F4F6;
+  --ifm-color-gray-300: #E5E7EB;
+  --ifm-color-gray-500: #6B7280;
+  --ifm-color-gray-700: #374151;
+  --ifm-color-gray-900: #1F2937;
+  
+  /* Typography */
+  --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+  
+  /* Font Sizes - Responsive Typography Scale */
+  --ifm-font-size-base: 16px;
+  --ifm-h1-font-size: 2.5rem;
+  --ifm-h2-font-size: 2rem;
+  --ifm-h3-font-size: 1.5rem;
+  --ifm-h4-font-size: 1.25rem;
+  --ifm-h5-font-size: 1.125rem;
+  --ifm-h6-font-size: 1rem;
+  
+  /* Spacing System - 4px Grid */
+  --ifm-spacing-1: 0.25rem; /* 4px */
+  --ifm-spacing-2: 0.5rem;  /* 8px */
+  --ifm-spacing-3: 0.75rem; /* 12px */
+  --ifm-spacing-4: 1rem;    /* 16px */
+  --ifm-spacing-5: 1.25rem; /* 20px */
+  --ifm-spacing-6: 1.5rem;  /* 24px */
+  --ifm-spacing-8: 2rem;    /* 32px */
+  --ifm-spacing-10: 2.5rem; /* 40px */
+  --ifm-spacing-12: 3rem;   /* 48px */
+  
+  /* Layout & Components */
+  --ifm-border-radius: 0.5rem;
+  --ifm-button-border-radius: 0.375rem;
+  --ifm-card-border-radius: 0.75rem;
+  --ifm-code-border-radius: 0.25rem;
+  
+  /* Code Highlighting */
+  --ifm-code-font-size: 0.875rem;
+  --docusaurus-highlighted-code-line-bg: rgba(37, 99, 235, 0.1);
+  
+  /* Shadows for Depth */
+  --ifm-box-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --ifm-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --ifm-box-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* === DARK MODE THEME === */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #60A5FA;
+  --ifm-color-primary-dark: #3B82F6;
+  --ifm-color-primary-darker: #2563EB;
+  --ifm-color-primary-darkest: #1D4ED8;
+  --ifm-color-primary-light: #93C5FD;
+  --ifm-color-primary-lighter: #BFDBFE;
+  --ifm-color-primary-lightest: #DBEAFE;
+  
+  --collabops-secondary: #14B8A6;
+  --collabops-accent: #FB923C;
+  
+  /* Dark mode code highlighting */
+  --docusaurus-highlighted-code-line-bg: rgba(96, 165, 250, 0.2);
+  
+  /* Dark mode backgrounds */
+  --ifm-background-color: #0F172A;
+  --ifm-background-surface-color: #1E293B;
 }
+
+/* === RESPONSIVE TYPOGRAPHY === */
+@media (max-width: 768px) {
+  :root {
+    --ifm-font-size-base: 14px;
+    --ifm-h1-font-size: 2rem;
+    --ifm-h2-font-size: 1.75rem;
+    --ifm-h3-font-size: 1.25rem;
+    --ifm-h4-font-size: 1.125rem;
+  }
+}
+
+/* === COMPONENT STYLING === */
+
+/* Enhanced Navbar */
+.navbar {
+  box-shadow: var(--ifm-box-shadow);
+  backdrop-filter: blur(8px);
+}
+
+.navbar__brand {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.navbar__item {
+  font-weight: 500;
+}
+
+/* Improved Sidebar */
+.theme-doc-sidebar-container {
+  border-right: 1px solid var(--ifm-color-gray-200);
+}
+
+[data-theme='dark'] .theme-doc-sidebar-container {
+  border-right-color: var(--ifm-color-gray-700);
+}
+
+.menu__link {
+  border-radius: var(--ifm-border-radius);
+  transition: all 0.2s ease;
+}
+
+.menu__link:hover {
+  background-color: var(--ifm-color-gray-100);
+  transform: translateX(2px);
+}
+
+[data-theme='dark'] .menu__link:hover {
+  background-color: var(--ifm-color-gray-700);
+}
+
+/* Enhanced Code Blocks */
+.prism-code {
+  border-radius: var(--ifm-code-border-radius);
+  box-shadow: var(--ifm-box-shadow);
+}
+
+/* Improved Tables */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: var(--ifm-border-radius);
+  box-shadow: var(--ifm-box-shadow-sm);
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+table th {
+  background-color: var(--ifm-color-gray-100);
+  font-weight: 600;
+}
+
+[data-theme='dark'] table th {
+  background-color: var(--ifm-color-gray-700);
+}
+
+/* Enhanced Cards */
+.card {
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-box-shadow);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--ifm-box-shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* Custom Callout Boxes */
+.alert {
+  border-radius: var(--ifm-border-radius);
+  border-left: 4px solid var(--ifm-color-primary);
+}
+
+.alert--info {
+  border-left-color: var(--ifm-color-info);
+}
+
+.alert--warning {
+  border-left-color: var(--ifm-color-warning);
+}
+
+.alert--danger {
+  border-left-color: var(--ifm-color-danger);
+}
+
+.alert--success {
+  border-left-color: var(--ifm-color-success);
+}
+
+/* Improved Buttons */
+.button {
+  border-radius: var(--ifm-button-border-radius);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.button--primary {
+  background: linear-gradient(135deg, var(--ifm-color-primary), var(--collabops-secondary));
+}
+
+.button--primary:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--ifm-box-shadow);
+}
+
+.button--secondary {
+  border-color: var(--collabops-secondary);
+  color: var(--collabops-secondary);
+}
+
+/* Enhanced Footer */
+.footer {
+  background: linear-gradient(135deg, var(--ifm-color-gray-900) 0%, var(--ifm-color-gray-700) 100%);
+}
+
+/* === MOBILE RESPONSIVENESS === */
+
+/* Mobile Navigation */
+@media (max-width: 996px) {
+  .navbar__toggle {
+    color: var(--ifm-color-primary);
+  }
+  
+  .navbar-sidebar {
+    border-radius: 0 0 var(--ifm-border-radius) var(--ifm-border-radius);
+    box-shadow: var(--ifm-box-shadow-lg);
+  }
+}
+
+/* Mobile Content Spacing */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--ifm-spacing-4);
+  }
+  
+  .col {
+    margin-bottom: var(--ifm-spacing-4);
+  }
+  
+  /* Improved mobile table scrolling */
+  .table-wrapper {
+    margin: var(--ifm-spacing-4) calc(-1 * var(--ifm-spacing-4));
+    padding: 0 var(--ifm-spacing-4);
+  }
+}
+
+/* === ACCESSIBILITY IMPROVEMENTS === */
+
+/* Focus States */
+.button:focus,
+.menu__link:focus,
+a:focus {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  :root {
+    --ifm-color-primary: #1E3A8A;
+    --ifm-border-width: 2px;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* === UTILITY CLASSES === */
+
+/* Spacing Utilities */
+.mb-0 { margin-bottom: 0 !important; }
+.mb-1 { margin-bottom: var(--ifm-spacing-1) !important; }
+.mb-2 { margin-bottom: var(--ifm-spacing-2) !important; }
+.mb-4 { margin-bottom: var(--ifm-spacing-4) !important; }
+.mb-6 { margin-bottom: var(--ifm-spacing-6) !important; }
+
+.mt-0 { margin-top: 0 !important; }
+.mt-1 { margin-top: var(--ifm-spacing-1) !important; }
+.mt-2 { margin-top: var(--ifm-spacing-2) !important; }
+.mt-4 { margin-top: var(--ifm-spacing-4) !important; }
+.mt-6 { margin-top: var(--ifm-spacing-6) !important; }
+
+/* Text Utilities */
+.text-center { text-align: center !important; }
+.text-primary { color: var(--ifm-color-primary) !important; }
+.text-secondary { color: var(--collabops-secondary) !important; }
+.text-accent { color: var(--collabops-accent) !important; }
+
+/* CollabOps Brand Elements */
+.collabops-gradient {
+  background: linear-gradient(135deg, var(--ifm-color-primary), var(--collabops-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+/* Enhanced Documentation Elements */
+.api-method {
+  padding: var(--ifm-spacing-1) var(--ifm-spacing-2);
+  border-radius: var(--ifm-code-border-radius);
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.api-method--get { background-color: var(--ifm-color-success); color: white; }
+.api-method--post { background-color: var(--ifm-color-primary); color: white; }
+.api-method--put { background-color: var(--collabops-accent); color: white; }
+.api-method--delete { background-color: var(--ifm-color-danger); color: white; }
