@@ -42,10 +42,12 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/collabops/collabops-docs/tree/main/',
+          // Edit this page on GitHub - points directly to GitHub's editor
+          editUrl: 'https://github.com/collabops/collabops-docs/edit/main/',
+          // Enable editing of the current version
+          editCurrentVersion: true,
+          // Enable editing of localized files if we add i18n later
+          editLocalizedFiles: true,
         },
         blog: {
           showReadingTime: true,
@@ -53,10 +55,8 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/collabops/collabops-docs/tree/main/',
+          // Edit this page on GitHub - points directly to GitHub's editor
+          editUrl: 'https://github.com/collabops/collabops-docs/edit/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
