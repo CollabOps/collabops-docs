@@ -1,7 +1,5 @@
 import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
 /**
  * Creating a sidebar enables you to:
  - create an ordered group of docs
@@ -106,18 +104,6 @@ const sidebars: SidebarsConfig = {
           items: [
             'installation/onpremise/helm-guide',
             'installation/onpremise/kubernetes-requirements',
-            'installation/onpremise/security-configuration',
-            'installation/onpremise/auth-integration',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'CI/CD 연동',
-          items: [
-            'installation/cicd/jenkins',
-            'installation/cicd/argocd',
-            'installation/cicd/github-actions',
-            'installation/cicd/redmine-migration',
           ],
         },
       ],
@@ -130,10 +116,6 @@ const sidebars: SidebarsConfig = {
       collapsed: true,
       items: [
         'security/rbac',
-        'security/audit-logs',
-        'security/repository-management',
-        'security/compliance',
-        'security/network-configuration',
       ],
     },
 
@@ -144,10 +126,6 @@ const sidebars: SidebarsConfig = {
       collapsed: true,
       items: [
         'ai-agents/system-overview',
-        'ai-agents/agent-roles',
-        'ai-agents/models',
-        'ai-agents/self-hosting-vs-api',
-        'ai-agents/cost-performance',
       ],
     },
 
@@ -186,10 +164,6 @@ const sidebars: SidebarsConfig = {
       collapsed: true,
       items: [
         'tutorials/15min-team-setup',
-        'tutorials/workflow-examples',
-        'tutorials/custom-ci-pipeline',
-        'tutorials/git-engine-customization',
-        'tutorials/ai-prompt-tuning',
       ],
     },
 
@@ -200,34 +174,6 @@ const sidebars: SidebarsConfig = {
       collapsed: true,
       items: [
         'experimental/self-healing-pr',
-        'experimental/dynamic-deployment',
-        'experimental/plugin-system',
-      ],
-    },
-
-    // 🧭 로드맵 및 버전 이력
-    {
-      type: 'category',
-      label: '🧭 로드맵 및 버전 이력',
-      collapsed: true,
-      items: [
-        'roadmap/2025-2026',
-        'roadmap/version-history',
-        'roadmap/milestones',
-      ],
-    },
-
-    // 🧩 엔터프라이즈 전용 문서
-    {
-      type: 'category',
-      label: '🧩 엔터프라이즈 전용 문서',
-      collapsed: true,
-      items: [
-        'enterprise/sla-policy',
-        'enterprise/case-studies',
-        'enterprise/customization-guide',
-        'enterprise/migration-guide',
-        'enterprise/security-checklist',
       ],
     },
 
@@ -238,9 +184,6 @@ const sidebars: SidebarsConfig = {
       collapsed: true,
       items: [
         'faq/general',
-        'faq/ai-features',
-        'faq/onpremise-tips',
-        'faq/adoption-cases',
       ],
     },
 
@@ -251,8 +194,6 @@ const sidebars: SidebarsConfig = {
       collapsed: true,
       items: [
         'support/technical-support',
-        'support/enterprise-channel',
-        'support/community',
       ],
     },
   ],

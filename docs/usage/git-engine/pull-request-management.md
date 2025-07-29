@@ -33,7 +33,7 @@ description: 효율적인 코드 리뷰와 Pull Request 워크플로우
    4. 결과 확인
    
    ## 📷 스크린샷 (해당하는 경우)
-   ![업로드 UI](screenshot.png)
+   <!-- 업로드 UI 스크린샷 예정 -->
    ```
 
 ### PR 템플릿 활용
