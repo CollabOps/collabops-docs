@@ -72,21 +72,22 @@ const config: Config = {
   ],
 
   plugins: [
-    [
-      '@easyops-cn/docusaurus-search-local',
-      {
-        // Whether to index docs pages
-        indexDocs: true,
-        // Whether to index blog pages
-        indexBlog: true,
-        // Whether to index static pages
-        indexPages: false,
-        // Language for search
-        language: ['en'],
-        // Whether to highlight search terms on target page
-        highlightSearchTermsOnTargetPage: true,
-      },
-    ],
+    // TEMPORARILY DISABLED - Search functionality commented out
+    // [
+    //   '@easyops-cn/docusaurus-search-local',
+    //   {
+    //     // Whether to index docs pages
+    //     indexDocs: true,
+    //     // Whether to index blog pages
+    //     indexBlog: true,
+    //     // Whether to index static pages
+    //     indexPages: false,
+    //     // Language for search
+    //     language: ['en'],
+    //     // Whether to highlight search terms on target page
+    //     highlightSearchTermsOnTargetPage: true,
+    //   },
+    // ],
   ],
 
   themeConfig: {
@@ -97,6 +98,7 @@ const config: Config = {
       logo: {
         alt: 'CollabOps Logo',
         src: 'img/logo.svg',
+        srcDark: 'img/logo_white.svg',
       },
       items: [
         {

@@ -12,40 +12,63 @@
 
 /* === ROOT VARIABLES - CollabOps Design System === */
 :root {
-  /* === CollabOps Brand Colors === */
-  --ifm-color-primary: #2563EB;
-  --ifm-color-primary-dark: #1D4ED8;
-  --ifm-color-primary-darker: #1E40AF;
-  --ifm-color-primary-darkest: #1E3A8A;
-  --ifm-color-primary-light: #3B82F6;
-  --ifm-color-primary-lighter: #60A5FA;
-  --ifm-color-primary-lightest: #93C5FD;
+  /* === Primary Brand Colors - Custom Palette === */
+  --ifm-color-primary: #188BFF;           /* Primary/500 - Main brand blue */
+  --ifm-color-primary-dark: #1570EF;      /* Primary/600 */
+  --ifm-color-primary-darker: #105AD2;    /* Primary/700 */
+  --ifm-color-primary-darkest: #0C45A9;   /* Primary/800 */
+  --ifm-color-primary-light: #3B9EFF;     /* Primary/400 */
+  --ifm-color-primary-lighter: #74BAFF;   /* Primary/300 */
+  --ifm-color-primary-lightest: #A8D6FF;  /* Primary/200 */
+  
+  /* Extended Primary Palette */
+  --collabops-primary-25: #F5FAFF;        /* Primary/25 - Lightest tint */
+  --collabops-primary-50: #EBF5FF;        /* Primary/50 */
+  --collabops-primary-100: #D6EDFF;       /* Primary/100 */
+  --collabops-primary-600-disabled: rgba(21, 112, 239, 0.5); /* Primary/600 at 50% */
   
   /* Secondary & Accent Colors */
-  --collabops-secondary: #0D9488;
-  --collabops-secondary-light: #14B8A6;
-  --collabops-accent: #F97316;
-  --collabops-accent-light: #FB923C;
+  --collabops-secondary: #44E4AF;         /* Green-1 - Bright secondary */
+  --collabops-secondary-dark: #1D8235;    /* Green-2 - Darker green */
+  --collabops-accent: #F9A825;            /* Yellow-1 - Accent color */
+  --collabops-accent-light: #ABDB07;      /* Olive-1 - Alternative accent */
+  --collabops-purple: #A970FF;            /* Purple-1 - Special accent */
   
-  /* Status Colors */
-  --ifm-color-success: #10B981;
-  --ifm-color-warning: #F59E0B;
-  --ifm-color-danger: #EF4444;
-  --ifm-color-info: #3B82F6;
+  /* Status/Semantic Colors */
+  --ifm-color-success: #1D8235;           /* Green-2 - Success state */
+  --ifm-color-success-light: #44E4AF;     /* Green-1 - Light success */
+  --ifm-color-success-lightest: #DCFCE7;  /* Green-3 - Success background */
+  --ifm-color-success-bg: #F0FDF4;        /* Green-4 - Success container */
   
-  /* Neutral Colors */
-  --ifm-color-gray-0: #FFFFFF;
-  --ifm-color-gray-100: #F9FAFB;
-  --ifm-color-gray-200: #F3F4F6;
-  --ifm-color-gray-300: #E5E7EB;
-  --ifm-color-gray-500: #6B7280;
-  --ifm-color-gray-700: #374151;
-  --ifm-color-gray-900: #1F2937;
+  --ifm-color-warning: #F9A825;           /* Yellow-1 - Warning state */
   
+  --ifm-color-danger: #F74632;            /* Red-2 - Error state */
+  --ifm-color-danger-light: #FFA298;      /* Red-1 - Light error */
+  --ifm-color-danger-dark: #C80F00;       /* Red-3 - Dark error */
+  --ifm-color-danger-lightest: #FFE2E2;   /* Red-4 - Error background */
+  --ifm-color-danger-bg: #FEF2F2;         /* Red-5 - Error container */
+  
+  --ifm-color-info: #188BFF;              /* Primary/500 - Info state */
+  
+  /* Custom Gray Scale - Enhanced Palette */
+  --ifm-color-gray-0: #FFFFFF;            /* Gray/White */
+  --ifm-color-gray-50: #F9FAFB;           /* Gray/50 */
+  --ifm-color-gray-100: #F3F4F6;          /* Gray/100 */
+  --ifm-color-gray-200: #E2E6EA;          /* Gray/200 */
+  --ifm-color-gray-300: #CBD2D9;          /* Gray/300 */
+  --ifm-color-gray-400: #B3BBC7;          /* Gray/400 */
+  --ifm-color-gray-500: #96A2B2;          /* Gray/500 */
+  --ifm-color-gray-600: #6B7684;          /* Gray/600 */
+  --ifm-color-gray-700: #4B5563;          /* Gray/700 */
+  --ifm-color-gray-800: #333B48;          /* Gray/800 */
+  --ifm-color-gray-900: #1F242C;          /* Gray/900 */
+  --ifm-color-gray-black: #000000;        /* Gray/Black */
+  --ifm-color-gray-bg-30: rgba(0, 0, 0, 0.3); /* Gray/BG-30 */
+
   /* Typography */
   --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --ifm-font-family-monospace: 'JetBrains Mono', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
-  
+
   /* Font Sizes - Responsive Typography Scale */
   --ifm-font-size-base: 16px;
   --ifm-h1-font-size: 2.5rem;
@@ -54,7 +77,7 @@
   --ifm-h4-font-size: 1.25rem;
   --ifm-h5-font-size: 1.125rem;
   --ifm-h6-font-size: 1rem;
-  
+
   /* Spacing System - 4px Grid */
   --ifm-spacing-1: 0.25rem; /* 4px */
   --ifm-spacing-2: 0.5rem;  /* 8px */
@@ -65,17 +88,17 @@
   --ifm-spacing-8: 2rem;    /* 32px */
   --ifm-spacing-10: 2.5rem; /* 40px */
   --ifm-spacing-12: 3rem;   /* 48px */
-  
+
   /* Layout & Components */
   --ifm-border-radius: 0.5rem;
   --ifm-button-border-radius: 0.375rem;
   --ifm-card-border-radius: 0.75rem;
   --ifm-code-border-radius: 0.25rem;
-  
+
   /* Code Highlighting */
   --ifm-code-font-size: 0.875rem;
-  --docusaurus-highlighted-code-line-bg: rgba(37, 99, 235, 0.1);
-  
+  --docusaurus-highlighted-code-line-bg: rgba(24, 139, 255, 0.1); /* Primary/500 with 10% opacity */
+
   /* Shadows for Depth */
   --ifm-box-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --ifm-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -84,24 +107,193 @@
 
 /* === DARK MODE THEME === */
 [data-theme='dark'] {
-  --ifm-color-primary: #60A5FA;
-  --ifm-color-primary-dark: #3B82F6;
-  --ifm-color-primary-darker: #2563EB;
-  --ifm-color-primary-darkest: #1D4ED8;
-  --ifm-color-primary-light: #93C5FD;
-  --ifm-color-primary-lighter: #BFDBFE;
-  --ifm-color-primary-lightest: #DBEAFE;
+  /* Primary colors - Lighter variants for dark mode visibility */
+  --ifm-color-primary: #3B9EFF;           /* Primary/400 - Main primary in dark mode */
+  --ifm-color-primary-dark: #188BFF;      /* Primary/500 */
+  --ifm-color-primary-darker: #1570EF;    /* Primary/600 */
+  --ifm-color-primary-darkest: #105AD2;   /* Primary/700 */
+  --ifm-color-primary-light: #74BAFF;     /* Primary/300 */
+  --ifm-color-primary-lighter: #A8D6FF;   /* Primary/200 */
+  --ifm-color-primary-lightest: #D6EDFF;  /* Primary/100 */
   
-  --collabops-secondary: #14B8A6;
-  --collabops-accent: #FB923C;
+  /* Secondary colors adjusted for dark mode */
+  --collabops-secondary: #44E4AF;         /* Green-1 - Keep bright for contrast */
+  --collabops-secondary-dark: #44E4AF;    /* Use brighter green in dark mode */
+  --collabops-accent: #F9A825;            /* Yellow-1 - Slightly reduced intensity */
   
-  /* Dark mode code highlighting */
-  --docusaurus-highlighted-code-line-bg: rgba(96, 165, 250, 0.2);
-  
+  /* Status colors - Adjusted for dark mode readability */
+  --ifm-color-success: #44E4AF;           /* Use brighter green */
+  --ifm-color-warning: #F9A825;           /* Keep yellow for visibility */
+  --ifm-color-danger: #FFA298;            /* Red-1 - Softer red for dark mode */
+  --ifm-color-info: #3B9EFF;             /* Primary/400 */
+
   /* Dark mode backgrounds */
-  --ifm-background-color: #0F172A;
-  --ifm-background-surface-color: #1E293B;
+  --ifm-background-color: #1F242C;        /* Gray/900 - Modern dark background */
+  --ifm-background-surface-color: #333B48; /* Gray/800 - Surface elements */
+  --ifm-background-secondary-surface: #4B5563; /* Gray/700 - Cards and modals */
+
+  /* Dark mode code highlighting */
+  --docusaurus-highlighted-code-line-bg: rgba(59, 158, 255, 0.2); /* Primary/400 with 20% opacity */
+
+  /* Adjusted gray colors for dark mode text */
+  --ifm-font-color-base: #E2E6EA;         /* Light gray for text */
+  --ifm-font-color-secondary: #B3BBC7;    /* Dimmer text */
 }
+
+/* === SEARCH ICON DARK MODE FIX === */
+[data-theme='dark'] .navbar__search-key svg,
+[data-theme='dark'] .DocSearch-Button svg,
+[data-theme='dark'] .DocSearch-Search-Icon {
+  color: white !important;
+  fill: white !important;
+}
+
+[data-theme='dark'] .navbar__search-key,
+[data-theme='dark'] .DocSearch-Button {
+  color: white !important;
+}
+
+/* Additional search icon targeting for various plugins */
+[data-theme='dark'] .navbar__search svg,
+[data-theme='dark'] .navbar__search .search-icon,
+[data-theme='dark'] [class*="searchButton"] svg,
+[data-theme='dark'] [class*="searchIcon"] {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* Fix for specific search input classes */
+[data-theme='dark'] .navbar__search-input,
+[data-theme='dark'] .searchInput_YFbd,
+[data-theme='dark'] .input_FOTf {
+  color: white !important;
+  background-color: var(--ifm-background-surface-color) !important;
+  border-color: var(--ifm-color-gray-600) !important;
+}
+
+[data-theme='dark'] .navbar__search-input::placeholder,
+[data-theme='dark'] .searchInput_YFbd::placeholder,
+[data-theme='dark'] .input_FOTf::placeholder {
+  color: var(--ifm-color-gray-400) !important;
+}
+
+/* COMPREHENSIVE SEARCH ICON FIX FOR DARK MODE */
+[data-theme='dark'] {
+  /* Target all possible search icon containers */
+  .navbar .searchBox_ZlJk svg,
+  .navbar .searchBox_ZlJk .search-icon,
+  .navbar__search svg,
+  .navbar__search-key svg,
+  .navbar__search-input + svg,
+  .searchBar_RVTs svg,
+  .searchBar_RVTs .search-icon,
+  .searchButton_mwad svg,
+  .searchIcon_Qyif,
+  [class*="search"] svg,
+  [class*="Search"] svg {
+    color: white !important;
+    fill: white !important;
+    stroke: white !important;
+  }
+
+  /* Force all SVG paths to be white */
+  .navbar svg path,
+  .navbar [class*="search"] svg path,
+  .navbar [class*="Search"] svg path {
+    fill: white !important;
+    stroke: white !important;
+  }
+}
+
+/* SEARCH STYLES TEMPORARILY DISABLED - Too aggressive, broke functionality */
+/*
+[data-theme='dark'] .navbar {
+  Force all descendants to be white
+}
+
+[data-theme='dark'] .navbar .searchBar_RVTs,
+[data-theme='dark'] .navbar .searchBar_RVTs *,
+[data-theme='dark'] .navbar [class*="search"],
+[data-theme='dark'] .navbar [class*="search"] *,
+[data-theme='dark'] .navbar [class*="Search"],
+[data-theme='dark'] .navbar [class*="Search"] * {
+  filter: invert(1) !important;
+  transition: none !important;
+}
+
+[data-theme='dark'] .navbar .searchBar_RVTs:hover,
+[data-theme='dark'] .navbar .searchBar_RVTs:hover *,
+[data-theme='dark'] .navbar [class*="search"]:hover,
+[data-theme='dark'] .navbar [class*="search"]:hover *,
+[data-theme='dark'] .navbar [class*="Search"]:hover,
+[data-theme='dark'] .navbar [class*="Search"]:hover * {
+  filter: invert(1) !important;
+  transition: none !important;
+  animation: none !important;
+}
+
+[data-theme='dark'] .navbar__search-key,
+[data-theme='dark'] .navbar__search-key:hover,
+[data-theme='dark'] .navbar__search-key:focus,
+[data-theme='dark'] .navbar__search-key:active {
+  filter: invert(1) !important;
+  transition: none !important;
+  animation: none !important;
+  border-color: var(--collabops-secondary) !important;
+  box-shadow: none !important;
+}
+
+[data-theme='dark'] .navbar .searchBar_RVTs,
+[data-theme='dark'] .navbar .searchBar_RVTs:hover,
+[data-theme='dark'] .navbar .searchBar_RVTs:focus,
+[data-theme='dark'] .navbar .searchBar_RVTs:active,
+[data-theme='dark'] .navbar .searchBar_RVTs:visited,
+[data-theme='dark'] .navbar .searchBar_RVTs:focus-within,
+[data-theme='dark'] .navbar .searchBar_RVTs *,
+[data-theme='dark'] .navbar .searchBar_RVTs:hover *,
+[data-theme='dark'] .navbar .searchBar_RVTs:focus *,
+[data-theme='dark'] .navbar .searchBar_RVTs:active *,
+[data-theme='dark'] .navbar .searchBar_RVTs:visited *,
+[data-theme='dark'] .navbar .searchBar_RVTs:focus-within *,
+[data-theme='dark'] .navbar [class*="search"],
+[data-theme='dark'] .navbar [class*="search"]:hover,
+[data-theme='dark'] .navbar [class*="search"]:focus,
+[data-theme='dark'] .navbar [class*="search"]:active,
+[data-theme='dark'] .navbar [class*="search"]:visited,
+[data-theme='dark'] .navbar [class*="search"]:focus-within,
+[data-theme='dark'] .navbar [class*="search"] *,
+[data-theme='dark'] .navbar [class*="search"]:hover *,
+[data-theme='dark'] .navbar [class*="search"]:focus *,
+[data-theme='dark'] .navbar [class*="search"]:active *,
+[data-theme='dark'] .navbar [class*="search"]:visited *,
+[data-theme='dark'] .navbar [class*="search"]:focus-within * {
+  filter: invert(1) !important;
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+}
+
+[data-theme='dark'] .searchInput_YFbd,
+[data-theme='dark'] .input_FOTf {
+  filter: invert(1) !important;
+}
+
+[data-theme='dark'] .searchInput_YFbd:hover,
+[data-theme='dark'] .input_FOTf:hover {
+  filter: invert(1) !important;
+  transition: none !important;
+  animation: none !important;
+}
+*/
+
+/* If the input field gets inverted too, fix the text */
+/*
+[data-theme='dark'] .searchInput_YFbd input,
+[data-theme='dark'] .input_FOTf input {
+  filter: invert(1) !important;
+}
+*/
 
 /* === RESPONSIVE TYPOGRAPHY === */
 @media (max-width: 768px) {
@@ -236,6 +428,8 @@ table th {
   color: var(--collabops-secondary);
 }
 
+
+
 /* Enhanced Footer */
 .footer {
   background: linear-gradient(135deg, var(--ifm-color-gray-900) 0%, var(--ifm-color-gray-700) 100%);
@@ -285,7 +479,7 @@ a:focus {
 /* High Contrast Mode Support */
 @media (prefers-contrast: high) {
   :root {
-    --ifm-color-primary: #1E3A8A;
+    --ifm-color-primary: #0C45A9;        /* Primary/800 - High contrast */
     --ifm-border-width: 2px;
   }
 }

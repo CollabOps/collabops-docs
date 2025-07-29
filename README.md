@@ -111,15 +111,15 @@ The documentation site uses CollabOps' custom design system:
 
 ```css
 /* Primary Colors */
---ifm-color-primary: #2563EB;           /* Primary Blue */
---collabops-secondary: #0D9488;         /* Secondary Teal */
---collabops-accent: #F97316;            /* Accent Orange */
+--ifm-color-primary: #188BFF;           /* Primary/500 - Main brand blue */
+--collabops-secondary: #44E4AF;         /* Green-1 - Bright secondary */
+--collabops-accent: #F9A825;            /* Yellow-1 - Accent color */
 
 /* Status Colors */
---ifm-color-success: #10B981;           /* Success Green */
---ifm-color-warning: #F59E0B;           /* Warning Yellow */
---ifm-color-danger: #EF4444;            /* Error Red */
---ifm-color-info: #3B82F6;              /* Info Blue */
+--ifm-color-success: #1D8235;           /* Green-2 - Success state */
+--ifm-color-warning: #F9A825;           /* Yellow-1 - Warning state */
+--ifm-color-danger: #F74632;            /* Red-2 - Error state */
+--ifm-color-info: #188BFF;              /* Primary/500 - Info state */
 ```
 
 ### Typography

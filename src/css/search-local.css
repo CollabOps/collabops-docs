@@ -32,6 +32,58 @@
   outline: none;
 }
 
+/* === DARK MODE SEARCH FIXES - TEMPORARILY DISABLED === */
+/*
+[data-theme='dark'] .navbar__search-key,
+[data-theme='dark'] .navbar__search-key:hover,
+[data-theme='dark'] .navbar__search-key:focus,
+[data-theme='dark'] .navbar__search-key:active {
+  filter: invert(1) !important;
+  transition: none !important;
+  animation: none !important;
+}
+
+[data-theme='dark'] .searchBar_RVTs,
+[data-theme='dark'] .searchBar_RVTs *,
+[data-theme='dark'] .searchBar_RVTs:hover,
+[data-theme='dark'] .searchBar_RVTs:hover *,
+[data-theme='dark'] .searchInput_YFbd,
+[data-theme='dark'] .searchInput_YFbd:hover,
+[data-theme='dark'] .input_FOTf,
+[data-theme='dark'] .input_FOTf:hover {
+  filter: invert(1) !important;
+  transition: none !important;
+  animation: none !important;
+}
+
+[data-theme='dark'] .navbar__search-key:active,
+[data-theme='dark'] .navbar__search-key:focus,
+[data-theme='dark'] .navbar__search-key:visited,
+[data-theme='dark'] .navbar__search-key:focus-within,
+[data-theme='dark'] .searchBar_RVTs:active,
+[data-theme='dark'] .searchBar_RVTs:focus,
+[data-theme='dark'] .searchBar_RVTs:visited,
+[data-theme='dark'] .searchBar_RVTs:focus-within,
+[data-theme='dark'] .searchBar_RVTs:active *,
+[data-theme='dark'] .searchBar_RVTs:focus *,
+[data-theme='dark'] .searchBar_RVTs:visited *,
+[data-theme='dark'] .searchBar_RVTs:focus-within *,
+[data-theme='dark'] .searchInput_YFbd:active,
+[data-theme='dark'] .searchInput_YFbd:focus,
+[data-theme='dark'] .searchInput_YFbd:visited,
+[data-theme='dark'] .searchInput_YFbd:focus-within,
+[data-theme='dark'] .input_FOTf:active,
+[data-theme='dark'] .input_FOTf:focus,
+[data-theme='dark'] .input_FOTf:visited,
+[data-theme='dark'] .input_FOTf:focus-within {
+  filter: invert(1) !important;
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+  opacity: 1 !important;
+}
+*/
+
 /* Search placeholder text */
 .navbar__search-key::placeholder {
   color: var(--ifm-color-gray-500);
